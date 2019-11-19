@@ -15,14 +15,14 @@ namespace ASPFeaturesDemonstration.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
-                services.AddDbContext<ASPFeaturesDemonstrationContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ASPFeaturesDemonstrationContextConnection")));
+            //builder.ConfigureServices((context, services) => {
+            //    services.AddDbContext<ASPFeaturesDemonstrationContext>(options =>
+            //        options.UseSqlServer(
+            //            context.Configuration.GetConnectionString("ASPFeaturesDemonstrationContextConnection")));
 
-                services.AddDefaultIdentity<ASPFeaturesDemonstrationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ASPFeaturesDemonstrationContext>();
-            });
+            //    services.AddDefaultIdentity<ASPFeaturesDemonstrationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //        .AddEntityFrameworkStores<ASPFeaturesDemonstrationContext>();
+            //});
         }
     }
 }
