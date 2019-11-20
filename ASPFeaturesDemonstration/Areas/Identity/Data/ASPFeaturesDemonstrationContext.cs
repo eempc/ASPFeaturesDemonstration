@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ASPFeaturesDemonstration.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using ASPFeaturesDemonstration.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace ASPFeaturesDemonstration.Models
-{
+namespace ASPFeaturesDemonstration.Models {
     public class ASPFeaturesDemonstrationContext : IdentityDbContext<ASPFeaturesDemonstrationUser>
     {
         public ASPFeaturesDemonstrationContext(DbContextOptions<ASPFeaturesDemonstrationContext> options)

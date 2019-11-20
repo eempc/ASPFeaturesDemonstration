@@ -11,10 +11,8 @@ namespace ASPFeaturesDemonstration.Areas.Identity.Data {
         [PersonalData, Required]
         public DateTime DateOfBirth { get; set; } // Example of a DateTime
         [PersonalData, Required]
-        public Gender Gender { get; set; } // Example of an enum
+        public Gender Gender { get; set; } // Example of an enum, this will automatically become a select drop down
         [PersonalData, Required]
-        public string CountryIso3166_1_alpha_2 { get; set; } // Example of something to be selected from a dropdown list, but is too long for an enum
+        public string CountryIso3166_1_alpha_2 { get; set; } // Example of something that will be crafted into a drop down list via SelectList
     }
-
-
 }

@@ -4,8 +4,8 @@ using System;
 
 namespace GeneralUnitTests {
     [TestClass]
-    public class UnitTest1 {
-        public static Countries countries = new Countries();
+    public class CountriesTest {
+        public Countries countries = new Countries();
         
         [TestMethod]
         public void SpotCheckAU() {            
@@ -24,7 +24,7 @@ namespace GeneralUnitTests {
         }
 
         [TestMethod]
-        public void SpotCheck() {
+        public void SpotCheckES() {
             string expected = "Spain";
             string test = countries.CountryList["ES"];
 
