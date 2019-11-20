@@ -5,16 +5,31 @@ using System;
 namespace GeneralUnitTests {
     [TestClass]
     public class UnitTest1 {
-
-
+        public static Countries countries = new Countries();
+        
         [TestMethod]
-        public void CountriesArrayLengthCheck() {
+        public void SpotCheckAU() {            
+            string expected = "Australia";
+            string test = countries.CountryList["AU"];
 
+            Assert.AreEqual(expected, test);
         }
 
         [TestMethod]
-        public void UnitedKingdomSpotCheck() {
+        public void SpotCheckNL() {
+            string expected = "Netherlands";
+            string test = countries.CountryList["NL"];
 
+            Assert.AreEqual(expected, test);
         }
+
+        [TestMethod]
+        public void SpotCheck() {
+            string expected = "Spain";
+            string test = countries.CountryList["ES"];
+
+            Assert.AreEqual(expected, test);
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace ASPFeaturesDemonstration.Areas.Identity.Data {
         [PersonalData, Required]
         public Gender Gender { get; set; } // Example of an enum
         [PersonalData, Required]
-        public string CountryIso3166_1_alpha_2 { get; set; }
+        public string CountryIso3166_1_alpha_2 { get; set; } // Example of something to be selected from a dropdown list, but is too long for an enum
     }
 
 
