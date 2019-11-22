@@ -10,6 +10,13 @@ namespace ASPFeaturesDemonstration.Pages {
     public class IndexModel : PageModel {
         private readonly ILogger<IndexModel> _logger;
 
+        public string[] toDoList = { 
+            "User identity registration",
+            "Additional user identity fields",
+            "Email contact submission form",
+            "Passwords from Azure Key Vault"
+        };
+
         public IndexModel(ILogger<IndexModel> logger) {
             _logger = logger;
         }

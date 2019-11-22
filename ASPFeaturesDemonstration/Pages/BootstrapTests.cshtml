@@ -1,0 +1,38 @@
+﻿@page
+@model ASPFeaturesDemonstration.Pages.BootstrapTestsModel
+@{
+    ViewData["Title"] = "BootstrapTests";
+}
+
+<h1>BootstrapTests</h1>
+<ul>
+    <li>Forms</li>
+    <li>Grids and columns</li>
+    <li>Buttons</li>
+</ul>
+
+<h2>Form not linked to a model</h2>
+<form>
+    <div class="form-group">
+        <label for="example-email">Email:</label>
+        <input type="email" class="form-control" placeholder="Enter email" />
+    </div>
+</form>
+
+<h2>Margin and padding</h2>
+
+
+<h2>Flexbox</h2>
+<p>'.d-sm-flex' will align these horizontally on desktop then stack nicely when mobile</p>
+<div class="d-sm-flex">
+    @for (int i = 0; i < 5; i++) {
+        <p class="p-2 m-1 bg-info">Item @i</p>
+    }
+</div>
+
+<p>Thoughts about Bootstrap as a mobile first style sheet:</p>
+<ul class="list-group">
+    <li class="list-group-item bg-info">Positioning is rigid because small devices would rather have content take up the full width of the screen</li>
+    <li class="list-group-item bg-info">Much more vertically inclined</li>
+</ul>
+

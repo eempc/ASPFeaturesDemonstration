@@ -7,55 +7,34 @@
 <h1>Contact</h1>
 <h2>@Model.Message</h2>
 
-<form class="form form-horizontal" method="post">
-    <div asp-validation-summary="All"></div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label asp-for="Contact.Name" class="col-md-3 right">Name:</label>
-                <div class="col-md-9">
-                    <input asp-for="Contact.Name" class="form-control" />
-                    <span asp-validation-for="Contact.Name"></span>
-                </div>
-            </div>
+<div class="container">
+    <form class="form" method="post">
+        <div asp-validation-summary="All"></div>
+
+        <div class="form-group">
+            <label asp-for="Contact.Name" class="col-md-3 right">Name:</label>
+            <input asp-for="Contact.Name" class="form-control" />
+            <span asp-validation-for="Contact.Name"></span>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
-                <div class="col-md-9">
-                    <input asp-for="Contact.Email" class="form-control" />
-                    <span asp-validation-for="Contact.Email"></span>
-                </div>
-            </div>
+
+        <div class="form-group">
+            <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
+            <input asp-for="Contact.Email" class="form-control" />
+            <span asp-validation-for="Contact.Email"></span>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label asp-for="Contact.Subject" class="col-md-3 right">Subject:</label>
-                <div class="col-md-9">
-                    <input asp-for="Contact.Subject" class="form-control" />
-                    <span asp-validation-for="Contact.Subject"></span>
-                </div>
-            </div>
+
+        <div class="form-group">
+            <label asp-for="Contact.Subject" class="col-md-3 right">Subject:</label>
+            <input asp-for="Contact.Subject" class="form-control" />
+            <span asp-validation-for="Contact.Subject"></span>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label asp-for="Contact.Message" class="col-md-3 right">Message:</label>
-                <div class="col-md-9">
-                    <textarea asp-for="Contact.Message" rows="6" class="form-control"></textarea>
-                    <span asp-validation-for="Contact.Message"></span>
-                </div>
-            </div>
+
+        <div class="form-group">
+            <label asp-for="Contact.Message" class="col-md-3 right">Message:</label>
+            <textarea asp-for="Contact.Message" rows="6" class="form-control"></textarea>
+            <span asp-validation-for="Contact.Message"></span>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <button type="submit">Send</button>
-        </div>
-    </div>
-</form>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block mt-5">Send</button>
+    </form>
+</div>

@@ -21,6 +21,7 @@ namespace ASPFeaturesDemonstration.Pages {
                 return Page();
             }
 
+            // Azure key vault password retrieval happens here, it did not work with OnGetAsync(), the global variable did not hold the password
             string password = "";
 
             try {
@@ -36,6 +37,8 @@ namespace ASPFeaturesDemonstration.Pages {
                 Message = "Website is experiencing technical difficulties.";
                 return Page();
             }
+
+            // Initiating the mail and sending it
 
             MailAddress fromAddress = new MailAddress(Emails.fromEmailAddress, "No Reply");
             MailAddress toAddress = new MailAddress(Emails.toEmailAddress);
@@ -55,7 +58,7 @@ namespace ASPFeaturesDemonstration.Pages {
             };
 
             await smtp.SendMailAsync(msg);
-            msg.Dispose();
+            msg.Dispose(); // Probably isn't necessary
             smtp.Dispose();
 
             return RedirectToPage("Index");

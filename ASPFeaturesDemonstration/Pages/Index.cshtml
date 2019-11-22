@@ -5,6 +5,26 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">ASP.NET Core 3.0 demonstration app</h1>
+    <h2>Things to do</h2>
+</div>
+
+<div class="container text-center">
+    <div class="row justify-content-center">
+        <div class="col-sm">
+            <ul class="list-group">
+                <li class="list-group-item rounded-pill m-2 bg-secondary">Example database model</li>
+                <li class="list-group-item rounded-pill m-2 bg-secondary">Display database with pagination</li>
+                <li class="list-group-item rounded-pill m-2 bg-secondary">Serve up database data by API</li>
+                <li class="list-group-item rounded-pill m-2 bg-secondary">Deploy web app to Azure</li>
+            </ul>
+        </div>
+        <div class="col-sm">
+            <ul class="list-group">
+                @foreach (string item in Model.toDoList) {
+                    <li class="list-group-item rounded-pill m-2 bg-secondary">@item</li>
+                }
+            </ul>
+        </div>
+    </div>
 </div>
