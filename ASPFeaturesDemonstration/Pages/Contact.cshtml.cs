@@ -7,19 +7,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using ASPFeaturesDemonstration.Protected;
 
 namespace ASPFeaturesDemonstration.Pages {
     public class ContactModel : PageModel {
         [BindProperty]
         public ContactFormModel Contact { get; set; }
 
-        public string Message { get; set; }
-        
-
-        public async Task OnGetAsync() {
-            Message = "Fine";
-
-        }
+        public string Message { get; set; }       
 
         public async Task<IActionResult> OnPostAsync() {
             if (!ModelState.IsValid) {
@@ -38,12 +33,12 @@ namespace ASPFeaturesDemonstration.Pages {
             }
 
             if (string.IsNullOrEmpty(password)) {
-                Message = "not fine";
+                Message = "Website is experiencing technical difficulties.";
                 return Page();
             }
 
-            MailAddress fromAddress = new MailAddress("evctestemail@gmail.com", "No Reply");
-            MailAddress toAddress = new MailAddress("evc776@gmail.com");
+            MailAddress fromAddress = new MailAddress(Emails.fromEmailAddress, "No Reply");
+            MailAddress toAddress = new MailAddress(Emails.toEmailAddress);
 
             SmtpClient smtp = new SmtpClient {
                 Host = "smtp.gmail.com",
