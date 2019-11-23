@@ -9,7 +9,7 @@ namespace ASPFeaturesDemonstration.Areas.Identity.Data {
         [PersonalData, Required]
         public string Name { get; set; } // Example of a simple string
         [PersonalData, Required]
-        public DateTime DateOfBirth { get; set; } // Example of a DateTime
+        public DateTime DateOfBirth { get; set; } // Example of a DateTime, another one could be registration date
         [PersonalData, Required]
         public Gender Gender { get; set; } // Example of an enum, this will automatically become a select drop down
         [PersonalData, Required]
