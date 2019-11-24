@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using ASPFeaturesDemonstration.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace ASPFeaturesDemonstration.Models {
     public class InventoryItem {
@@ -21,6 +22,7 @@ namespace ASPFeaturesDemonstration.Models {
         public string Description { get; set; }
         [Required]
         public Category Category { get; set; }
+        //public IFormFile FormFile { get; set; }
     }
 
     // The problem with enums is that you can never change its order unless you specify its integer
